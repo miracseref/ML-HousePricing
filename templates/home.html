@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles/style.css">
     <title>Boston House Price Prediction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,900;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Test</h1>
+    <div class="login">
+        <h1>Boston House Price Prediction</h1>
+
+        <!-- Main input for receiving query to our model -->
+        <form action="{{url_for('predict')}}" method="post">
+            <input type="text" name="CRIM" placeholder="CRIM" required><br>
+            <input type="text" name="ZN" placeholder="ZN" required/><br>
+            <input type="text" name="INDUS" placeholder="INDUS" required/><br>
+            <input type="text" name="CHAS" placeholder="CHAS" required/><br>
+            <input type="text" name="NOX" placeholder="NOX" required/><br>
+            <input type="text" name="RM" placeholder="RM" required/><br>
+            <input type="text" name="Age" placeholder="Age" required/><br>
+            <input type="text" name="DIS" placeholder="DIS" required/><br>
+            <input type="text" name="RAD" placeholder="RAD" required/><br>
+            <input type="text" name="TAX" placeholder="TAX" required/><br>
+            <input type="text" name="PTRATIO" placeholder="PTRATIO" required/><br>
+            <input type="text" name="B" placeholder="B" required/><br>
+            <input type="text" name="LSTAT" placeholder="LSTAT" required/><br>
+
+            <button type="submit">Predict</button>
+        </form>
+        <p>{{prediction_text}}</p>
+    </div>
 </body>
+
 </html>
