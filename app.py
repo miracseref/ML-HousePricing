@@ -30,7 +30,7 @@ def predict():
     final_input = scalar.transform(np.array(data).reshape(1, -1))
     print(final_input)
     output = regmodel.predict(final_input)[0]
-    return render_template('home.html', prediction_text = f"The price of this house is ${int(abs(output))*1000}.")
+    return render_template('home.html', prediction_text = f"This house cost ${int(abs(output))*1000}.")
 
 if __name__ == "__main__":
     app.run(debug=True)
