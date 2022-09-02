@@ -1,5 +1,9 @@
 # Boston House Pricing Prediction
 
-### This project aims to predict the price of houses in Boston according to some features.
+This web application aims to predict the price of houses in Boston according to some features.
 
-### The repository contains everything from the notebook used to train the model to the entire web app with all python, html & css files.
+[Link of the web app](https://boston-houses-price-prediction.herokuapp.com)
+
+### Example
+
+![Usage example](https://raw.githubusercontent.com/miracseref/bostonhousepricing/main/static/images/example.png)
